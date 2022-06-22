@@ -621,7 +621,7 @@ public class MediaCenter {
             return;
         }
 
-        MediaFileType fileType = getFileType(filePath);
+        MediaFileType fileType = getMediaFileType(filePath);
         String mimeType = fileType.mimeType;
 
         Intent intent = new Intent(Intent.ACTION_VIEW);
