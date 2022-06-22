@@ -571,7 +571,7 @@ public class MediaCenter {
     /**
      * 获取文件的mimeType
      */
-    public static MediaFileType getFileType(String path) {
+    public static MediaFileType getMediaFileType(String path) {
         int lastDot = path.lastIndexOf('.');
         if (lastDot < 0)
             return new MediaFileType("", 0, "*/*", FileClassify.UNKNOWN);
@@ -582,27 +582,27 @@ public class MediaCenter {
         return mediaFileType;
     }
 
-    public static MediaFileType getFileType(File file) {
-        return getFileType(file.getAbsolutePath());
+    public static MediaFileType getMediaFileType(File file) {
+        return getMediaFileType(file.getAbsolutePath());
     }
 
     /**
      * 获取文件的mimeType
      */
-    public static String getMimeTypeForFile(String path) {
-        MediaFileType mediaFileType = getFileType(path);
+    public static String getMimeType(String path) {
+        MediaFileType mediaFileType = getMediaFileType(path);
         return mediaFileType.mimeType;
     }
 
-    public static String getMimeTypeForFile(File file) {
-        MediaFileType mediaFileType = getFileType(file);
+    public static String getMimeType(File file) {
+        MediaFileType mediaFileType = getMediaFileType(file);
         return mediaFileType.mimeType;
     }
 
     /**
      * 获取文件的mimeType的Code值
      */
-    public static int getFileTypeForMimeType(String mimeType) {
+    public static int getMimeTypeCode(String mimeType) {
         Integer value = sMimeTypeMap.get(mimeType);
         return (value == null ? 0 : value.intValue());
     }
@@ -631,7 +631,6 @@ public class MediaCenter {
             intent.setDataAndType(FileProvider.getUriForFile(context, context.getApplicationInfo().packageName + ".media.provider", new File(filePath)), mimeType);
             intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             intent.addFlags(Intent.FLAG_GRANT_WRITE_URI_PERMISSION);
-
         } else {
             intent.setDataAndType(Uri.fromFile(new File(filePath)), mimeType);
         }
