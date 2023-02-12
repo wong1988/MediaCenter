@@ -186,6 +186,9 @@ public class MediaCenter {
     static final int FILE_TYPE_XML = 10002;
     static final int FILE_TYPE_APP = 10003;
 
+    // 安装包扩展名数组
+    public static final String[] INSTALL_EXTENSIONS;
+
     public enum FileClassify {
         UNKNOWN,
         MEDIA_AUDIO,
@@ -377,6 +380,7 @@ public class MediaCenter {
         addFileType("HTML", FILE_TYPE_HTML, "text/html", FileClassify.HTML);
         addFileType("XML", FILE_TYPE_XML, "text/plain", FileClassify.XML);
         addFileType("APK", FILE_TYPE_APP, "application/vnd.android.package-archive", FileClassify.APK);
+        INSTALL_EXTENSIONS = new String[]{".APK"};
 
     }
 
