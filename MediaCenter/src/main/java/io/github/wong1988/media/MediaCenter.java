@@ -59,6 +59,8 @@ public class MediaCenter {
     static final int FILE_TYPE_FLAC = 10;
     private static final int FIRST_AUDIO_FILE_TYPE = FILE_TYPE_MP3;
     private static final int LAST_AUDIO_FILE_TYPE = FILE_TYPE_FLAC;
+    // 音频扩展名数组
+    public static final String[] AUDIO_EXTENSIONS;
 
     // MIDI文件类型【音乐演奏指令序列】
     static final int FILE_TYPE_MID = 21;
@@ -243,6 +245,7 @@ public class MediaCenter {
         addFileType("AAC", FILE_TYPE_AAC, "audio/aac-adts", FileClassify.MEDIA_AUDIO);
         addFileType("MKA", FILE_TYPE_MKA, "audio/x-matroska", FileClassify.MEDIA_AUDIO);
         addFileType("FLAC", FILE_TYPE_FLAC, "audio/flac", FileClassify.MEDIA_AUDIO);
+        AUDIO_EXTENSIONS = new String[]{".MP3", ".MPGA", ".M4A", ".WAV", ".AMR", ".AWB", ".WMA", ".OGG", ".OGA", ".AAC", ".MKA", ".FLAC"};
 
         // MIDI
         addFileType("MID", FILE_TYPE_MID, "audio/midi", FileClassify.MEDIA_AUDIO_MIDI);
