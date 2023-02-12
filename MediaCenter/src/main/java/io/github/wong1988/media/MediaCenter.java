@@ -59,8 +59,6 @@ public class MediaCenter {
     static final int FILE_TYPE_FLAC = 10;
     private static final int FIRST_AUDIO_FILE_TYPE = FILE_TYPE_MP3;
     private static final int LAST_AUDIO_FILE_TYPE = FILE_TYPE_FLAC;
-    // 音频扩展名数组
-    public static final String[] AUDIO_EXTENSIONS;
 
     // MIDI文件类型【音乐演奏指令序列】
     static final int FILE_TYPE_MID = 21;
@@ -68,6 +66,8 @@ public class MediaCenter {
     static final int FILE_TYPE_IMY = 23;
     private static final int FIRST_MIDI_FILE_TYPE = FILE_TYPE_MID;
     private static final int LAST_MIDI_FILE_TYPE = FILE_TYPE_IMY;
+    // 音频扩展名数组
+    public static final String[] AUDIO_EXTENSIONS;
 
     // 视频格式
     static final int FILE_TYPE_MP4 = 51;
@@ -84,6 +84,8 @@ public class MediaCenter {
     static final int FILE_TYPE_QT = 62;
     private static final int FIRST_VIDEO_FILE_TYPE = FILE_TYPE_MP4;
     private static final int LAST_VIDEO_FILE_TYPE = FILE_TYPE_QT;
+    // 视频扩展名数组
+    public static final String[] VIDEO_EXTENSIONS;
 
     // 图片格式
     static final int FILE_TYPE_JPEG = 101;
@@ -245,7 +247,6 @@ public class MediaCenter {
         addFileType("AAC", FILE_TYPE_AAC, "audio/aac-adts", FileClassify.MEDIA_AUDIO);
         addFileType("MKA", FILE_TYPE_MKA, "audio/x-matroska", FileClassify.MEDIA_AUDIO);
         addFileType("FLAC", FILE_TYPE_FLAC, "audio/flac", FileClassify.MEDIA_AUDIO);
-        AUDIO_EXTENSIONS = new String[]{".MP3", ".MPGA", ".M4A", ".WAV", ".AMR", ".AWB", ".WMA", ".OGG", ".OGA", ".AAC", ".MKA", ".FLAC"};
 
         // MIDI
         addFileType("MID", FILE_TYPE_MID, "audio/midi", FileClassify.MEDIA_AUDIO_MIDI);
@@ -257,6 +258,7 @@ public class MediaCenter {
         addFileType("MXMF", FILE_TYPE_MID, "audio/midi", FileClassify.MEDIA_AUDIO_MIDI);
         addFileType("SMF", FILE_TYPE_SMF, "audio/sp-midi", FileClassify.MEDIA_AUDIO_MIDI);
         addFileType("IMY", FILE_TYPE_IMY, "audio/imelody", FileClassify.MEDIA_AUDIO_MIDI);
+        AUDIO_EXTENSIONS = new String[]{".MP3", ".MPGA", ".M4A", ".WAV", ".AMR", ".AWB", ".WMA", ".OGG", ".OGA", ".AAC", ".MKA", ".FLAC", ".MID", ".MIDI", ".XMF", ".RTTTL", ".RTX", ".OTA", ".MXMF", ".SMF", ".IMY"};
 
         // Video
         addFileType("MPEG", FILE_TYPE_MP4, "video/mpeg", FileClassify.MEDIA_VIDEO);
@@ -276,6 +278,7 @@ public class MediaCenter {
         addFileType("MPG", FILE_TYPE_MP2PS, "video/mp2p", FileClassify.MEDIA_VIDEO);
         addFileType("MPEG", FILE_TYPE_MP2PS, "video/mp2p", FileClassify.MEDIA_VIDEO);
         addFileType("MOV", FILE_TYPE_QT, "video/quicktime", FileClassify.MEDIA_VIDEO);
+        VIDEO_EXTENSIONS = new String[]{};
 
         // Image
         addFileType("JPG", FILE_TYPE_JPEG, "image/jpeg", FileClassify.MEDIA_IMAGE);
