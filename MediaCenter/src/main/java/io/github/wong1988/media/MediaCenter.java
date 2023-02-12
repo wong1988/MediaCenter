@@ -278,7 +278,7 @@ public class MediaCenter {
         addFileType("MPG", FILE_TYPE_MP2PS, "video/mp2p", FileClassify.MEDIA_VIDEO);
         addFileType("MPEG", FILE_TYPE_MP2PS, "video/mp2p", FileClassify.MEDIA_VIDEO);
         addFileType("MOV", FILE_TYPE_QT, "video/quicktime", FileClassify.MEDIA_VIDEO);
-        VIDEO_EXTENSIONS = new String[]{};
+        VIDEO_EXTENSIONS = new String[]{".MPEG", ".MPG", ".MP4", ".M4V", ".3GP", ".3GPP", ".3G2", ".3GPP2", ".WMV", ".ASF", ".MKV", ".TS", ".AVI", ".WEBM", ".MOV"};
 
         // Image
         addFileType("JPG", FILE_TYPE_JPEG, "image/jpeg", FileClassify.MEDIA_IMAGE);
