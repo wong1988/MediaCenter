@@ -17,14 +17,14 @@ Step 2. Add the dependency
 
 ```
 dependencies {
-    implementation 'com.github.wong1988:MediaCenter:1.0.0'
+    implementation 'com.github.wong1988:MediaCenter:1.0.1'
 }
 ```
 
 ## Method
 
 ```
-// 提供了部分分类的扩展名集合，如：图片、视频、媒体（图片+视频）、文档等
+// 提供了部分文件分类的扩展名数组，如：图片、视频、媒体（图片+视频）、文档等
 MediaCenter.XXX_EXTENSIONS
 // 获取 媒体类型
 getMimeType()
@@ -32,6 +32,8 @@ getMimeType()
 getMediaFileType()
 // 是否是某种类型，如：图片类型、视频类型等
 isXXXFileType()
+// 调用系统打开文件
+openFile()
 ```
 
 ## Change Log

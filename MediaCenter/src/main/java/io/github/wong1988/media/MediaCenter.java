@@ -113,6 +113,8 @@ public class MediaCenter {
     private static final int LAST_RAW_IMAGE_FILE_TYPE = FILE_TYPE_SRW;
     // 图片扩展名数组
     public static final String[] IMAGE_EXTENSIONS;
+    // 媒体扩展名数组
+    public static final String[] MEDIA_EXTENSIONS;
 
     // 播放列表文件
     static final int FILE_TYPE_M3U = 151;
@@ -311,6 +313,8 @@ public class MediaCenter {
         addFileType("PEF", FILE_TYPE_PEF, "image/x-pentax-pef", FileClassify.MEDIA_IMAGE_RAW);
         addFileType("SRW", FILE_TYPE_SRW, "image/x-samsung-srw", FileClassify.MEDIA_IMAGE_RAW);
         IMAGE_EXTENSIONS = new String[]{".JPG", ".JPEG", ".GIF", ".PNG", ".BMP", ".WBMP", ".WEBP", ".HEIC", ".HEIF", ".DNG", ".CR2", ".NEF", ".NRW", ".ARW", ".RW2", ".ORF", ".RAF", ".PEF", ".SRW"};
+        MEDIA_EXTENSIONS = new String[]{".MPEG", ".MPG", ".MP4", ".M4V", ".3GP", ".3GPP", ".3G2", ".3GPP2", ".WMV", ".ASF", ".MKV", ".TS", ".AVI", ".WEBM", ".MOV",
+                ".JPG", ".JPEG", ".GIF", ".PNG", ".BMP", ".WBMP", ".WEBP", ".HEIC", ".HEIF", ".DNG", ".CR2", ".NEF", ".NRW", ".ARW", ".RW2", ".ORF", ".RAF", ".PEF", ".SRW"};
 
         // 播放列表文件
         addFileType("M3U", FILE_TYPE_M3U, "audio/x-mpegurl", FileClassify.MEDIA_PLAY_LIST);
