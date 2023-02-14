@@ -189,6 +189,9 @@ public class MediaCenter {
     // 安装包扩展名数组
     public static final String[] INSTALL_EXTENSIONS;
 
+    // 文档扩展名数组
+    public static final String[] DOCUMENT_EXTENSIONS;
+
     public enum FileClassify {
         UNKNOWN,
         MEDIA_AUDIO,
@@ -381,6 +384,11 @@ public class MediaCenter {
         addFileType("XML", FILE_TYPE_XML, "text/plain", FileClassify.XML);
         addFileType("APK", FILE_TYPE_APP, "application/vnd.android.package-archive", FileClassify.APK);
         INSTALL_EXTENSIONS = new String[]{".APK"};
+        DOCUMENT_EXTENSIONS = new String[]{".XLA", ".XLC", ".XLM", ".XLS", ".XLT", ".XLW", ".XLAM", ".XLSB", ".XLSM", ".XLTM", ".XLSX", ".XLTX",
+                ".DOC", ".DOT", ".DOCM", ".DOCX", ".DOTM", ".DOTX",
+                ".PPT", ".PPS", ".POTM", ".POTX", ".PPAM", ".PPSM", ".PPSX", ".PPTM", ".PPTX",
+                ".PDF",
+                ".TXT"};
 
     }
 
@@ -515,14 +523,14 @@ public class MediaCenter {
         return isExcelFileType(fileType) ||
                 isWordFileType(fileType) ||
                 isPowerPointFileType(fileType) ||
-                isPdfFileType(fileType);
+                isPdfFileType(fileType) || isTxtFileType(fileType);
     }
 
     public static boolean isDocumentFileType(@NonNull MediaFileType mediaFileType) {
         return isExcelFileType(mediaFileType) ||
                 isWordFileType(mediaFileType) ||
                 isPowerPointFileType(mediaFileType) ||
-                isPdfFileType(mediaFileType);
+                isPdfFileType(mediaFileType) || isTxtFileType(mediaFileType);
     }
 
     /**
@@ -621,10 +629,9 @@ public class MediaCenter {
     }
 
     /**
-     * 注意：需要读取权限
      * 使用第三方App打开文件
      */
-    @RequiresPermission(allOf = {Manifest.permission.READ_EXTERNAL_STORAGE})
+    @RequiresPermission(allOf = {Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE})
     public static void openFile(Context context, String filePath) {
 
         File file = new File(filePath);
