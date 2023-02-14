@@ -30,7 +30,7 @@ MediaCenter.XXX_EXTENSIONS
 getMimeType()
 // 获取 媒体类型等相关信息
 getMediaFileType()
-// 是否是某种类型，如：图片类型、视频类型等
+// 是否是某种文件类型，如：图片类型、视频类型等
 isXXXFileType()
 // 调用系统打开文件
 openFile()
