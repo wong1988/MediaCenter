@@ -26,7 +26,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-public class GetFilePathFromUri {
+/**
+ * TODO  测试使用
+ */
+public class TestCase {
 
     /**
      * 文件路径名称
