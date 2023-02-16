@@ -17,7 +17,7 @@ Step 2. Add the dependency
 
 ```
 dependencies {
-    implementation 'com.github.wong1988:MediaCenter:1.0.1'
+    implementation 'com.github.wong1988:MediaCenter:1.0.2'
 }
 ```
 
@@ -37,6 +37,10 @@ openFile()
 ```
 
 ## Change Log
+
+1.0.2:
+
+* 增加了一些重载方法
 
 1.0.1:
 

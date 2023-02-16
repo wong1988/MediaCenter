@@ -410,6 +410,10 @@ public class MediaCenter {
         return FileClassify.MEDIA_AUDIO == mediaFileType.classify || FileClassify.MEDIA_AUDIO_MIDI == mediaFileType.classify;
     }
 
+    public static boolean isAudioFileType(@NonNull FileClassify fileClassify) {
+        return FileClassify.MEDIA_AUDIO == fileClassify || FileClassify.MEDIA_AUDIO_MIDI == fileClassify;
+    }
+
     /**
      * 是否是视频格式
      */
@@ -420,6 +424,10 @@ public class MediaCenter {
 
     public static boolean isVideoFileType(@NonNull MediaFileType mediaFileType) {
         return FileClassify.MEDIA_VIDEO == mediaFileType.classify;
+    }
+
+    public static boolean isVideoFileType(@NonNull FileClassify fileClassify) {
+        return FileClassify.MEDIA_VIDEO == fileClassify;
     }
 
     /**
@@ -436,6 +444,10 @@ public class MediaCenter {
         return FileClassify.MEDIA_IMAGE == mediaFileType.classify || FileClassify.MEDIA_IMAGE_RAW == mediaFileType.classify;
     }
 
+    public static boolean isImageFileType(@NonNull FileClassify fileClassify) {
+        return FileClassify.MEDIA_IMAGE == fileClassify || FileClassify.MEDIA_IMAGE_RAW == fileClassify;
+    }
+
     /**
      * 是否播放列表格式
      */
@@ -446,6 +458,10 @@ public class MediaCenter {
 
     public static boolean isPlayListFileType(@NonNull MediaFileType mediaFileType) {
         return FileClassify.MEDIA_PLAY_LIST == mediaFileType.classify;
+    }
+
+    public static boolean isPlayListFileType(@NonNull FileClassify fileClassify) {
+        return FileClassify.MEDIA_PLAY_LIST == fileClassify;
     }
 
     /**
@@ -461,6 +477,11 @@ public class MediaCenter {
                 || isImageFileType(mediaFileType) || isPlayListFileType(mediaFileType);
     }
 
+    public static boolean isMediaFileType(@NonNull FileClassify fileClassify) {
+        return isAudioFileType(fileClassify) || isVideoFileType(fileClassify)
+                || isImageFileType(fileClassify) || isPlayListFileType(fileClassify);
+    }
+
     /**
      * 是否drm格式
      */
@@ -471,6 +492,10 @@ public class MediaCenter {
 
     public static boolean isDrmFileType(@NonNull MediaFileType mediaFileType) {
         return FileClassify.DRM == mediaFileType.classify;
+    }
+
+    public static boolean isDrmFileType(@NonNull FileClassify fileClassify) {
+        return FileClassify.DRM == fileClassify;
     }
 
     /**
@@ -485,6 +510,10 @@ public class MediaCenter {
         return FileClassify.DOCUMENT_EXCEL == mediaFileType.classify;
     }
 
+    public static boolean isExcelFileType(@NonNull FileClassify fileClassify) {
+        return FileClassify.DOCUMENT_EXCEL == fileClassify;
+    }
+
     /**
      * 是否是Word格式
      */
@@ -495,6 +524,10 @@ public class MediaCenter {
 
     public static boolean isWordFileType(@NonNull MediaFileType mediaFileType) {
         return FileClassify.DOCUMENT_WORD == mediaFileType.classify;
+    }
+
+    public static boolean isWordFileType(@NonNull FileClassify fileClassify) {
+        return FileClassify.DOCUMENT_WORD == fileClassify;
     }
 
     /**
@@ -509,6 +542,10 @@ public class MediaCenter {
         return FileClassify.DOCUMENT_POWER_POINT == mediaFileType.classify;
     }
 
+    public static boolean isPowerPointFileType(@NonNull FileClassify fileClassify) {
+        return FileClassify.DOCUMENT_POWER_POINT == fileClassify;
+    }
+
     /**
      * 是否是PDF格式
      */
@@ -518,6 +555,10 @@ public class MediaCenter {
 
     public static boolean isPdfFileType(@NonNull MediaFileType mediaFileType) {
         return FileClassify.DOCUMENT_PDF == mediaFileType.classify;
+    }
+
+    public static boolean isPdfFileType(@NonNull FileClassify fileClassify) {
+        return FileClassify.DOCUMENT_PDF == fileClassify;
     }
 
     /**
@@ -537,6 +578,13 @@ public class MediaCenter {
                 isPdfFileType(mediaFileType) || isTxtFileType(mediaFileType);
     }
 
+    public static boolean isDocumentFileType(@NonNull FileClassify fileClassify) {
+        return isExcelFileType(fileClassify) ||
+                isWordFileType(fileClassify) ||
+                isPowerPointFileType(fileClassify) ||
+                isPdfFileType(fileClassify) || isTxtFileType(fileClassify);
+    }
+
     /**
      * 是否是压缩格式
      */
@@ -547,6 +595,10 @@ public class MediaCenter {
 
     public static boolean isCompressFileType(@NonNull MediaFileType mediaFileType) {
         return FileClassify.COMPRESS == mediaFileType.classify;
+    }
+
+    public static boolean isCompressFileType(@NonNull FileClassify fileClassify) {
+        return FileClassify.COMPRESS == fileClassify;
     }
 
     /**
@@ -560,6 +612,10 @@ public class MediaCenter {
         return FileClassify.TXT == mediaFileType.classify;
     }
 
+    public static boolean isTxtFileType(@NonNull FileClassify fileClassify) {
+        return FileClassify.TXT == fileClassify;
+    }
+
     /**
      * 是否是Html格式
      */
@@ -569,6 +625,11 @@ public class MediaCenter {
 
     public static boolean isHtmlFileType(@NonNull MediaFileType mediaFileType) {
         return FileClassify.HTML == mediaFileType.classify;
+    }
+
+
+    public static boolean isHtmlFileType(@NonNull FileClassify fileClassify) {
+        return FileClassify.HTML == fileClassify;
     }
 
     /**
@@ -582,6 +643,10 @@ public class MediaCenter {
         return FileClassify.XML == mediaFileType.classify;
     }
 
+    public static boolean isXmlFileType(@NonNull FileClassify fileClassify) {
+        return FileClassify.XML == fileClassify;
+    }
+
     /**
      * 是否是安装包格式
      */
@@ -591,6 +656,10 @@ public class MediaCenter {
 
     public static boolean isApkFileType(@NonNull MediaFileType mediaFileType) {
         return FileClassify.APK == mediaFileType.classify;
+    }
+
+    public static boolean isApkFileType(@NonNull FileClassify fileClassify) {
+        return FileClassify.APK == fileClassify;
     }
 
     /**
